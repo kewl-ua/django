@@ -1,0 +1,84 @@
+.header {
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+
+    color: $white-1;
+
+    &-nav {
+
+    }
+
+    &-text {
+
+    }
+
+    &-services {
+
+    }
+
+    &-title {
+        font-size: 4.4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &-description {
+        font-size: 2.4rem;
+    }
+}
+
+.logo {
+    &-image {
+
+    }
+}
+
+.nav {
+    &-list {
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &-item {
+
+    }
+
+    &-link {
+        &:hover {
+            color: $green-1;
+            border-bottom: 2px solid;
+        }
+    }
+}
+
+.services {
+
+}
+
+.service {
+    &-title {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    &-description {
+        font-size: 1.6rem;
+    }
+
+    &-desktop {
+
+    }
+
+    &-mobile {
+
+    }
+
+    &-facebook {
+
+    }
+
+    &-crm {
+
+    }
+}
