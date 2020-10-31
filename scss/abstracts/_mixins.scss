@@ -58,20 +58,20 @@
 }
 
 
-@mixin site_width($width: $site_width) {
+@mixin site-width($width: $site-width) {
     margin: 0 auto;
     max-width: $width;
 
-    @include respond-to(mobile) {
-        padding: 0 $global_mobile_padding;
-    }
+    // @include respond-to(mobile) {
+    //     padding: 0 $global-mobile-padding;
+    // }
 
-    @include respond-to(tablet) {
-        padding: 0 $global_tablet_padding;
-    }
+    // @include respond-to(tablet) {
+    //     padding: 0 $global-tablet-padding;
+    // }
     
-    @include respond-to(desktop) {
-        padding: 0 $global_desktop_padding;
-    }
+    // @include respond-to(desktop) {
+    //     padding: 0 $global-desktop-padding;
+    // }
 }
 

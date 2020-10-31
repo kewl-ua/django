@@ -1,5 +1,17 @@
 @font-face {
     font-family: 'Nunito Sans';
+    src: url('../fonts/NunitoSans-ExtraLight.eot');
+    src: url('../fonts/NunitoSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NunitoSans-ExtraLight.svg#NunitoSans-SemiBold') format('svg'),
+        url('../fonts/NunitoSans-ExtraLight.ttf') format('truetype'),
+        url('../fonts/NunitoSans-ExtraLight.woff') format('woff'),
+        url('../fonts/NunitoSans-ExtraLight.woff2') format('woff2');
+    font-weight: 200; /* ~ Extra Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
     src: url('../fonts/NunitoSans-Light.eot');
     src: url('../fonts/NunitoSans-Light.eot?#iefix') format('embedded-opentype'),
         url('../fonts/NunitoSans-Light.svg#NunitoSans-SemiBold') format('svg'),
@@ -45,8 +57,27 @@
     font-weight: 700; /* ~ Heavy */
     font-style: normal;
 }
-  
-  
 
-  
-  
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Light.eot');
+    src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Light.svg#Raleway-Light') format('svg'),
+        url('../fonts/Raleway-Light.ttf') format('truetype'),
+        url('../fonts/Raleway-Light.woff') format('woff'),
+        url('../fonts/Raleway-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.eot');
+    src: url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Regular.svg#Raleway-Light') format('svg'),
+        url('../fonts/Raleway-Regular.ttf') format('truetype'),
+        url('../fonts/Raleway-Regular.woff') format('woff'),
+        url('../fonts/Raleway-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
