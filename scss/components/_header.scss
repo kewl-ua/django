@@ -39,12 +39,13 @@
 
     &-title {
         font-size: 4rem;
-        font-weight: 200;
+        font-weight: 300;
         text-transform: uppercase;
     }
 
     &-description {
-        font-size: 2.4rem;
+        margin-top: 10px;
+        font-size: 2rem;
     }
 }
 
@@ -95,32 +96,33 @@
 
 .services {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .service {
+    width: 170px;
+    position: relative;
+    padding-left: 60px;
+
+    & + & {
+        margin-left: 40px;
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 4.5rem;        
+        color: $green-1;
+    }
+
     &-title {
         font-size: 2.4rem;
         font-weight: 600;
     }
 
     &-description {
+        margin-top: 5px;
         font-size: 1.6rem;
-    }
-
-    &-desktop {
-
-    }
-
-    &-mobile {
-
-    }
-
-    &-facebook {
-
-    }
-
-    &-crm {
-
     }
 }
