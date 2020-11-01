@@ -1,0 +1,41 @@
+.features {
+	background-color: #ffffff;
+
+	&-inner {
+		@include site-width;
+	}
+
+	&-title {
+		margin-bottom: 70px;
+
+		&-accent {
+			color: #0f0;
+		}
+	}
+}
+
+.feature {
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&-item {
+		width: calc(100% / 3);
+		text-align: center;
+		padding-bottom: 100px;
+	}
+
+	&-title {
+		padding-bottom: 8px;
+	}
+
+	&-icon { 
+	  width: 100px; 
+	  height: 80px;
+	  margin: auto;
+	  padding-bottom: 20px;
+	  display: block;
+	}
+}
