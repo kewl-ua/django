@@ -3,6 +3,7 @@
     color: $white-1;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 -225px 100px 0px rgba(0,0,0,.5);
 
     &-video {
         z-index: -1;
