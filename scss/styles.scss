@@ -1,7 +1,15 @@
-@import "global/variables";
-@import "global/mixins";
+@import "base/fonts";
+@import "base/reset";
 
-@import "global/fonts";
-@import "global/reset";
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@import "components/title";
+@import "base/tags";
+@import "base/titles";
+
+/* General */
+@import "components/icon";
+// @import "components/title";
+
+/* Layout */
+@import "components/header";

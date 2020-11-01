@@ -1,0 +1,15 @@
+/* Globals */
+$global-font-size: 10px;
+$global-font-family: 'Nunito Sans', sans-serif;
+$global-site-width: 1024px;
+
+/* Colors */
+$green-1: #89b61e;
+$white-1: #ffffff;
+$grey-1: #666666;
+
+/* Media */
+$mobile-portrait: 320px; /* Vertically oriented phone */
+$mobile-landscape: 480px; /* Horizontally oriented phone */
+$tablet: 768px; /* Vertically oritented tablet */
+$desktop: $global-site-width;

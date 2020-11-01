@@ -1,0 +1,87 @@
+/*
+$base-font-size: 16;
+font-size: rem(22);
+*/
+@function rem($px, $base: $global-font-size) {
+    @return ($px / $base) * 1rem;
+}
+
+/*
+@include respond-to(tablet) {
+    .header {
+        width: 100%;
+    }
+}
+*/
+@mixin respond-to($device) {
+    /* 320px - 480px */
+    @if $device == mobile-portrait {
+        @media only screen and (min-width: $mobile-portrait) and (max-width: $mobile-landscape - 1) {
+            @content;
+        }
+    }
+
+    /* 480px - 767 px */
+    @if $device == mobile-landscape {
+        @media only screen and (min-width: $mobile-landscape) and (max-width: $tablet - 1) {
+            @content;
+        }
+    }
+
+    /* 320px - 767 px */
+    @if $device == mobiles {
+        @media only screen and (min-width: $mobile-portrait) and (max-width: $tablet - 1) {
+            @content;
+        }
+    }
+
+    /* 768px - 1019px */
+    @if $device == tablet {
+        @media only screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+            @content;
+        }
+    }
+
+    /* 320px - 1019px */
+    @if $device == devices {
+        @media only screen and (min-width: $mobile-portrait) and (max-width: $desktop - 1) {
+            @content;
+        }
+    }
+}
+
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+
+@mixin align($vertical:top, $display: inline-block) {
+    display: $display;
+    vertical-align: $vertical;
+}
+
+
+@mixin site-width($width: $global-site-width) {
+    margin: 0 auto;
+    max-width: $width;
+
+    /*
+    @include respond-to(mobile) {
+        padding: 0 $global-mobile-padding;
+    }
+
+    @include respond-to(tablet) {
+        padding: 0 $global-tablet-padding;
+    }
+    
+    @include respond-to(desktop) {
+        padding: 0 $global-desktop-padding;
+    }
+    */
+}
+
