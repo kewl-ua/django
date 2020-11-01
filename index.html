@@ -1,81 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="...">
-        <title>Django Bridge</title>
+<html>
+<head>
+	<title>DjangoBride</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="digital agencies">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<script src="slick/slick.min.js"></script>
+    <link rel="stylesheet" href="gitignore/styles.css">
+</head>
+<body>
+<header class="header">
+    <video class="header-video" loop autoplay muted>
+        <source src="video/bg.mp4" type="video/mp4">
+    </video>
 
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+    <div class="header-inner">
+        <div class="header-nav">
+            <a href="#" class="logo">
+                Django<span class="logo-thin">Bridge</span>
+            </a>
 
-    <body>
-        <header class="header">
-            <video class="header-video" loop autoplay muted>
-                <source src="video/bg.mp4" type="video/mp4">
-            </video>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ideas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-            <div class="header-inner">
-                <div class="header-nav">
-                    <a href="#" class="logo">
-                        Django<span class="logo-thin">Bridge</span>
-                    </a>
-        
-                    <nav class="nav">
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Clients</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Ideas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Contact us</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-    
-                <div class="header-text">
-                    <h2 class="header-title">Custom web and mobile apps development</h2>
-                    <p class="header-description">
-                        for Enterprises, ISV&acute; s & SaaS Companies, Start-ups and Digital Agencies
-                    </p>
-                </div>
-    
-                <div class="header-services">
-                    <ul class="services">
-                        <li class="service icon-monitor">
-                            <h3 class="service-title">Web</h3>
-                            <p class="service-description">Application Development</p>
-                        </li>
-                        <li class="service icon-mobile">
-                            <h3 class="service-title">Mobile</h3>
-                            <p class="service-description">Application Development</p>
-                        </li>
-                        <li class="service icon-facebook">
-                            <h3 class="service-title">Facebook</h3>
-                            <p class="service-description">Application Development</p>
-                        </li>
-                        <li class="service icon-man">
-                            <h3 class="service-title">CRM</h3>
-                            <p class="service-description">Application Development</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-    </body>
+        <div class="header-text">
+            <h2 class="header-title">Custom web and mobile apps development</h2>
+            <p class="header-description">
+                for Enterprises, ISV&acute; s & SaaS Companies, Start-ups and Digital Agencies
+            </p>
+        </div>
+
+        <div class="header-services">
+            <ul class="services">
+                <li class="service icon-monitor">
+                    <h3 class="service-title">Web</h3>
+                    <p class="service-description">Application Development</p>
+                </li>
+                <li class="service icon-mobile">
+                    <h3 class="service-title">Mobile</h3>
+                    <p class="service-description">Application Development</p>
+                </li>
+                <li class="service icon-facebook">
+                    <h3 class="service-title">Facebook</h3>
+                    <p class="service-description">Application Development</p>
+                </li>
+                <li class="service icon-man">
+                    <h3 class="service-title">CRM</h3>
+                    <p class="service-description">Application Development</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<div class="our">
+	<div class="our-inner">
+
+		<div class="our-blog">
+			<h3 class="title"><span>Our</span> blog</h3>
+			<ul class="blog-list">
+				<li class="blog-item">
+					<div class="blog-topic">
+						<span class="topic"><span>10</span>Aug</span>
+						<span class="topic-name">Web</span>
+					</div>
+					<h4 class="blog-title">Ember.js is a solid single application framework</h4>
+					<button class="blog-btn">Read more</button>
+				</li>
+				<li class="blog-item">
+					<div class="blog-topic">
+						<span class="topic"><span>12</span>Jun</span>
+						<span class="topic-name">Mobile</span>
+					</div>
+					<h4 class="blog-title">45 Github Issues Dos and Don'ts</h4>
+					<button class="blog-btn">Read more</button>
+				</li>
+				<li class="blog-item">
+					<div class="blog-topic">
+						<span class="topic"><span>8</span>May</span>
+						<span class="topic-name">CRM</span>
+					</div>
+					<h4 class="blog-title">JavaScript Promises</h4>
+					<button class="blog-btn">Read more</button>
+				</li>
+				<li class="blog-item">
+					<div class="blog-topic">
+						<span class="topic"><span>14</span>Aug</span>
+						<span class="topic-name">CRM</span>
+					</div>
+					<h4 class="blog-title">Bind Function</h4>
+					<button class="blog-btn">Read more</button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="our-clients">
+			<h3 class="title"><span>Our</span> clients</h3>
+			<ul class="clients-list">
+				<li class="clients-item">
+					<a href="" class="clients-link">Afnic</a>
+				</li>
+				<li class="clients-item">
+					<a href="" class="clients-link">Instagram</a>
+				</li>
+				<li class="clients-item">
+					<a href="" class="clients-link">Logitech</a>
+				</li>
+				<li class="clients-item">
+					<a href="" class="clients-link">Django</a>
+				</li>
+				<li class="clients-item">
+					<a href="" class="clients-link">SP</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+	
+	<script>
+		$(document).ready(function(){
+		  $('.clients-list').slick({
+		  	infinite: true,
+  			slidesToShow: 5,
+  			slidesToScroll: 1
+		  });
+		});  
+	</script>
+</body>
 </html>
