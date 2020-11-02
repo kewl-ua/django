@@ -1,9 +1,9 @@
-@import "base/fonts";
-@import "base/reset";
-
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
+@import "base/fonts";
+@import "base/reset";
+@import "base/titles";
 @import "base/tags";
 
 /* General */
@@ -14,4 +14,5 @@
 @import "components/header";
 @import "components/features";
 @import "components/portfolio";
+@import "components/our";
 @import "components/footer";
