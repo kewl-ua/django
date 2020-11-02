@@ -1,0 +1,103 @@
+.our{
+	border-top: 2px solid $grey-2;
+	padding: 110px 0 100px;
+	&-inner{
+		@include site-width;
+	}
+}
+
+.blog{
+	&-list{
+		// display: flex;
+		// flex-flow: row wrap;
+		height: 480px;
+		margin-bottom: 110px;
+		&::after{
+			content: "";
+			display: block;
+			width: 100%;
+			clear: both;
+		}
+	}
+	&-item{
+		float: left;
+		padding: 30px;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		margin: 2px;
+	}
+	&-topic{
+		display: flex;
+		justify-content: space-between;
+	}
+	&-info{
+		display: flex;
+		flex-flow: column wrap;
+	}
+	&-title{
+		font-size: 2.4rem;
+		font-weight: 700;
+		color: $blog-item;
+		margin-bottom: 30px;
+	}
+	&-btn{
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: $blog-item;
+		border: 1px solid $blog-item;
+		padding: 5px 0;
+		text-align: center;
+		max-width: 100px;
+	}
+}
+
+.topic{
+			font-size: 1.4rem;
+			color: $blog-item;
+			&-num{
+				font-size: 2.4rem;
+			}
+		}
+		.topic-name{
+			font-size: 1.4rem;
+			font-weight: 600;
+			background: rgba(40, 40, 40, 0.25);
+			color: $blog-item;
+			padding: 10px;
+		}
+
+// blog items
+.web{
+	background: url(../img/our/blog1.jpg) no-repeat center/cover;
+	width: calc(50% - 4px);
+	height: calc(100% + 4px);
+}
+.mobile{
+	background: url(../img/our/blog2.jpg) center/cover no-repeat;
+	width: calc(50% - 4px);
+	height: 50%;
+}
+.crm{
+	background: url(../img/our/blog3.jpg) no-repeat center/cover;
+	width: calc(25% - 4px);
+	height: 50%;
+}
+.crm1{
+	background: url(../img/our/blog4.jpg) no-repeat center/cover;
+	width: calc(25% - 4px);
+	height: 50%;
+}
+
+
+
+.clients{
+	&-list{
+		display: flex;
+		justify-content: space-around;
+		padding: 0 70px;
+	}
+	&-link{
+		font-size: 0;
+	}
+}
