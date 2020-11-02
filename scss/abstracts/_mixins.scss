@@ -48,6 +48,13 @@ font-size: rem(22);
             @content;
         }
     }
+
+    /* 1024+ */
+    @if $device == desktop {
+        @media only screen and (min-width: $desktop) {
+            @content;
+        }
+    }
 }
 
 
