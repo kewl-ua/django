@@ -26,6 +26,13 @@
 		align-items: top;
 		margin-top: 3.54%;
 
+		@include respond-to(mobiles) {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+
+		}
+
 		.las-insurance {
 			background: url(../img/portfolio_1.png) center no-repeat;
 			background-size: 100% 100%;
@@ -54,6 +61,11 @@
 	&-item {
 		width: calc(100%/4 - 1px);
 		padding: 14.8958% 0 1.6145% 1.77%;
+
+		@include respond-to(mobiles) {
+			width: 100%;
+			padding: 50.13% 0 5.333% 5.33%;
+		}
 	}
 
 	&-title {
@@ -62,6 +74,11 @@
 		font-weight: medium;
 		font-style: normal;
 		color: $white-1;
+
+		@include respond-to(mobiles) {
+			font-size: 1rem;
+		}
+
 	}
 
 	&-description {
@@ -70,6 +87,10 @@
 		font-weight: medium;
 		font-style: normal;
 		color: $white-1;
+
+		@include respond-to(mobiles) {
+			font-size: 0.875rem;
+		}
 	}
 }
 
