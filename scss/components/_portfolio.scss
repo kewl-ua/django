@@ -6,7 +6,7 @@
 		padding: 5.729% 0 9.375%;
 
 		.title {
-			font-family: 'Futura PT', sans-serif ;
+			font-family: $global-font-family;
 			font-size: 2.5rem;
 			font-weight: book;
 			font-style: normal;
@@ -69,7 +69,7 @@
 	}
 
 	&-title {
-		font-family: 'Futura PT', sans-serif ;
+		font-family: $global-font-family;
 		font-size: 1.5rem;
 		font-weight: medium;
 		font-style: normal;
@@ -82,7 +82,7 @@
 	}
 
 	&-description {
-		font-family: 'Futura PT', open-sans ;
+		font-family: $global-font-family;
 		font-size: 1.125rem;
 		font-weight: medium;
 		font-style: normal;
