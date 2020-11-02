@@ -88,6 +88,8 @@
     }
 
     &-link {
+        padding-bottom: 4px;
+
         &:hover {
             color: $green-1;
             border-bottom: 2px solid;
@@ -97,17 +99,13 @@
 
 .services {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .service {
     width: 170px;
     position: relative;
     padding-left: 68px;
-
-    & + & {
-        margin-left: 40px;
-    }
 
     &::before {
         position: absolute;
