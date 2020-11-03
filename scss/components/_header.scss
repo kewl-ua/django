@@ -54,7 +54,7 @@
         text-transform: uppercase;
 
         @include respond-to(mobiles) {
-            font-size: rem(22px);
+            font-size: 6vw;
         }
     }
 
@@ -63,7 +63,7 @@
         font-size: rem(24px);
 
         @include respond-to(mobiles) {
-            font-size: rem(16px);
+            font-size: 4vw;
         }
     }
 }
@@ -210,7 +210,7 @@
         font-weight: 500;
 
         @include respond-to(mobiles) {
-            font-size: rem(16px);
+            font-size: 4.2vw;
         }
     }
 
@@ -219,7 +219,7 @@
         font-size: rem(16px);
 
         @include respond-to(mobiles) {
-            font-size: rem(14px);
+            font-size: 3.7vw;
         }
     }
 }
