@@ -33,6 +33,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include respond-to(mobiles) {
+            justify-content: center;
+        }
     }
 
     &-text {
@@ -47,11 +51,19 @@
         font-size: rem(44px);
         font-weight: 300;
         text-transform: uppercase;
+
+        @include respond-to(mobiles) {
+            font-size: rem(22px);
+        }
     }
 
     &-description {
         margin-top: 5px;
         font-size: rem(24px);
+
+        @include respond-to(mobiles) {
+            font-size: rem(16px);
+        }
     }
 }
 
@@ -105,9 +117,9 @@
         font-size: rem(14px);
         font-weight: 700;
         text-transform: uppercase;
-        padding: 30px;
 
         @include respond-to(mobiles) {
+            padding: 30px;
             font-size: rem(16px);
             flex-direction: column;
             width: 250px;
@@ -118,6 +130,7 @@
 
     &-item {
         /* To prevent border affecting header-nav items position. */
+        padding: 4px 0;
         border-bottom: 2px solid transparent;
 
         &.active,
@@ -147,13 +160,23 @@
 
 .services {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+
+    @include respond-to(mobiles) {
+        flex-wrap: wrap;
+    }
 }
 
 .service {
     width: 170px;
     position: relative;
     padding-left: 68px;
+
+    @include respond-to(mobiles) {
+        width: 40%;
+        margin-top: 40px;
+        padding-left: 60px;
+    }
 
     &::before {
         position: absolute;
@@ -166,10 +189,18 @@
     &-title {
         font-size: rem(24px);
         font-weight: 500;
+
+        @include respond-to(mobiles) {
+            font-size: rem(16px);
+        }
     }
 
     &-description {
         margin-top: 5px;
         font-size: rem(16px);
+
+        @include respond-to(mobiles) {
+            font-size: rem(14px);
+        }
     }
 }

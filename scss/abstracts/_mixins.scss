@@ -77,11 +77,12 @@ font-size: rem(22);
     margin: 0 auto;
     max-width: $width;
 
-    /*
-    @include respond-to(mobile) {
-        padding: 0 $global-mobile-padding;
+    @include respond-to(mobiles) {
+        padding-left: $global-mobile-padding;
+        padding-right: $global-mobile-padding;
     }
 
+    /*
     @include respond-to(tablet) {
         padding: 0 $global-tablet-padding;
     }
