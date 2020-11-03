@@ -58,30 +58,6 @@
   font-style: normal;
 }
 
-@font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway/Raleway-Light.eot');
-    src: url('../fonts/Raleway/Raleway-Light.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Raleway/Raleway-Light.svg#Raleway-Light') format('svg'),
-        url('../fonts/Raleway/Raleway-Light.ttf') format('truetype'),
-        url('../fonts/Raleway/Raleway-Light.woff') format('woff'),
-        url('../fonts/Raleway/Raleway-Light.woff2') format('woff2');
-    font-weight: 300; /* Light */
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway/Raleway-Regular.eot');
-    src: url('../fonts/Raleway/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Raleway/Raleway-Regular.svg#Raleway-Light') format('svg'),
-        url('../fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
-        url('../fonts/Raleway/Raleway-Regular.woff') format('woff'),
-        url('../fonts/Raleway/Raleway-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
 /* Icons */
 @font-face {
     font-family: 'icomoon';
