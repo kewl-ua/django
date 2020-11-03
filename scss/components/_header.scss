@@ -44,7 +44,7 @@
     }
 
     &-description {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: rem(24px);
     }
 }
@@ -56,6 +56,16 @@
 }
 
 .nav {
+    &-toggle {
+        display: none;
+    }
+
+    &-label {
+        font-size: rem(20px);
+        color: $white-1;
+        display: none;
+    }
+
     &-list {
         display: flex;
         font-size: rem(14px);

@@ -14,43 +14,43 @@
 }
 
 .icon {
-    &-facebook:before {
+    &-facebook::before {
         content: "\e900";
     }
 
-    &-user:before {
+    &-user::before {
         content: "\e901";
     }
 
-    &-monitor:before {
+    &-monitor::before {
         content: "\e902";
     }
 
-    &-mobile:before {
+    &-mobile::before {
         content: "\e903";
     }
     
-    &-burger:before {
+    &-burger::before {
         content: "\e904";
     }
 
-    &-facebook-square:before {
+    &-facebook-square::before {
         content: "\e905";
     }
     
-    &-linkedin:before {
+    &-linkedin::before {
         content: "\e906";
     }
 
-    &-mail:before {
+    &-mail::before {
         content: "\e907";
     }
 
-    &-phone:before {
+    &-phone::before {
         content: "\e908";
     }
 
-    &-twitter:before {
+    &-twitter::before {
         content: "\e909";
     }
 }
