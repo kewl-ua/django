@@ -1,11 +1,11 @@
 .header {
     height: 100vh;
-    color: $white-1;
     position: relative;
     overflow: hidden;
+    color: $white-1;
+    text-shadow: 1px 1px rgba(0,0,0,.2);
     background: rgba(0,0,0,.4);
     box-shadow: inset 0 -225px 100px -100px rgba(0,0,0,.6);
-    text-shadow: 1px 1px rgba(0,0,0,.2);
 
     &-video {
         z-index: -1;
@@ -50,25 +50,8 @@
 }
 
 .logo {
-    position: relative;
-    padding-left: 45px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.8rem;
-
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        background: no-repeat url(../img/logo.png);
-        background-position: left center;
-        background-size: contain;
-    }
-
-    &-thin {
-        font-weight: 300;
+    &-image {
+        display: block;
     }
 }
 
