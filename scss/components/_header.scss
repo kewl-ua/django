@@ -89,6 +89,7 @@
     &-link {
         padding-bottom: 4px;
 
+        &.active,
         &:hover {
             color: $green-1;
             border-bottom: 2px solid;
