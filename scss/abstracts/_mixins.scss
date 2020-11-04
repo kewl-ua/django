@@ -82,11 +82,12 @@ font-size: rem(22);
         padding-right: $global-mobile-padding;
     }
 
-    /*
     @include respond-to(tablet) {
-        padding: 0 $global-tablet-padding;
+        padding-left: $global-tablet-padding;
+        padding-right: $global-tablet-padding;
     }
     
+    /*
     @include respond-to(desktop) {
         padding: 0 $global-desktop-padding;
     }

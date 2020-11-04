@@ -86,6 +86,16 @@
     }
 }
 
+.nav-toggle:checked ~ .nav .overlay {
+    background-color: rgba(0,0,0,.4);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 .nav {
     @include respond-to(mobiles) {
         position: fixed;
@@ -162,18 +172,26 @@
             margin-left: 40px;
         }
 
+        @include respond-to(devices) {
+            & + & {
+                margin-left: 20px;
+            }
+        }
+
         @include respond-to(mobiles) {
             border: none;
             list-style: disc;
 
             & + & {
-                margin: 30px 0 0;
+                margin: 30px 0 0 20px;
             }
         }
     }
 
     &-link {
-
+        @include respond-to(devices) {
+            font-size: 1.6vw;
+        }
     }
 }
 
@@ -223,3 +241,4 @@
         }
     }
 }
+
