@@ -1,14 +1,14 @@
 .header {
+    @include prefix(box-shadow, inset 0 -225px 100px -100px $dark-2);
+
     height: 100vh;
     position: relative;
     overflow: hidden;
     color: $white-1;
     text-shadow: 1px 1px $dark-1;
     background: rgba(0,0,0,.4);
-    box-shadow: inset 0 -225px 100px -100px $dark-2;
 
     @include respond-to(mobiles) {
-        text-shadow: none;
         box-shadow: inset 0 -225px 100px -100px $dark-2,
             inset 0 75px 100px -30px $dark-2;
     }
@@ -17,11 +17,17 @@
         z-index: -1;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond-to(desktop) {
+            transform: translate(-50%, -50%) scale(1.35);
+        }
     }
 
     &-inner {
         @include site-width;
+
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -37,6 +43,7 @@
         @include respond-to(mobiles) {
             position: relative;
             justify-content: center;
+            text-shadow: none;
         }
     }
 
@@ -49,8 +56,8 @@
     }
 
     &-title {
-        font-size: rem(44px);
-        font-weight: 300;
+        @include font(rem(44px), 300);
+
         text-transform: uppercase;
 
         @include respond-to(mobiles) {
@@ -78,30 +85,18 @@
 
         @include respond-to(mobiles) {
             display: block;
-            background: center no-repeat url(../img/logo-s.png);
-            background-size: 160px 30px;
             width: 100%;
             height: 38px;
+            background: center no-repeat url(../img/logo-s.png);
+            background-size: 160px 30px;
         }
     }
 }
 
-.nav-toggle:checked ~ .nav .overlay {
-    background-color: rgba(0,0,0,.4);
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
 .nav {
     @include respond-to(mobiles) {
-        position: fixed;
-        top: 0;
-        right: 100%;
-        bottom: 0;
+        @include position(fixed, 0, 100%, 0);
+
         z-index: 999;
         background: $dark-3;
     }
@@ -128,6 +123,13 @@
                 ~ .nav .logo-side {
                     position: static;
                 }
+
+                ~ .nav .nav-overlay {
+                    @include position(absolute, 0, 0, 0, 0);
+            
+                    background-color: rgba(0,0,0,.4);
+                    z-index: -1;
+                }
             }
         }
     }
@@ -145,9 +147,9 @@
     }
 
     &-list {
+        @include font(rem(14px), 700);
+
         display: flex;
-        font-size: rem(14px);
-        font-weight: 700;
         text-transform: uppercase;
 
         @include respond-to(mobiles) {
@@ -183,13 +185,13 @@
             list-style: disc;
 
             & + & {
-                margin: 30px 0 0 20px;
+                margin: 30px 0 0;
             }
         }
     }
 
     &-link {
-        @include respond-to(devices) {
+        @include respond-to(tablet) {
             font-size: 1.6vw;
         }
     }
@@ -206,8 +208,8 @@
 
 .service {
     width: 170px;
-    position: relative;
     padding-left: 68px;
+    position: relative;
 
     @include respond-to(mobiles) {
         width: 40%;
@@ -216,6 +218,8 @@
     }
 
     &::before {
+        @include position(absolute, 0, auto, auto, 0);
+
         position: absolute;
         left: 0;
         top: 0;
@@ -224,8 +228,7 @@
     }
 
     &-title {
-        font-size: rem(24px);
-        font-weight: 500;
+        @include font(rem(24px), 500);
 
         @include respond-to(mobiles) {
             font-size: 4.2vw;
@@ -241,4 +244,3 @@
         }
     }
 }
-
