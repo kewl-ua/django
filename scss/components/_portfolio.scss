@@ -1,29 +1,28 @@
 .portfolio {
-	padding: 5.729% 0 9.375%;
 
-	&-inner {
-		border-top: 2px solid $gray-2;	
+	padding: 5.2% 0 9.375%;
+	border-top: 2px solid $gray-2;
+	
+	@include site-width;
+	@include respond-to(mobiles) {
+		border: none;
+	}
+
+	&-inner {	
 		overflow-y: scroll;
 		height: 18.75%;
-		width: 100%;
-
-		@include respond-to(mobiles) {
-			height: 64%;
-		}	
-		
+		width: 100%;	
 	}	
 
 	&-inner::-webkit-scrollbar {
 		display: none;
-		}
+		}	
 	
 	&-list {
 		display: flex;
 		justify-content: space-between;
 		overflow-y: scroll;
-		overflow-x: hidden;
 		align-items: top;
-		margin-top: 3.54%;
 		height: 18.75%;
 		width: 400%;
 
@@ -33,25 +32,25 @@
 
 		.las-insurance {
 			background: url(../img/portfolio/portfolio_1.jpg);
-			box-shadow: inset 0 -17rem 7rem -4rem $blue-1;
+			box-shadow: inset 0 -45vw 20vw -25vw $blue-1;
 			background-size: 100% 100%;
 		}
 
 		.college-push {
 			background: url(../img/portfolio/portfolio_2.jpg);
-			box-shadow: inset 0 -17rem 7rem -4rem $red-1;
+			box-shadow: inset 0 -45vw 20vw -25vw $red-1;
 			background-size: 100% 100%;
 		}
 
 		.kitovu-app {
 			background: url(../img/portfolio/portfolio_3.jpg);
-			box-shadow: inset 0 -17rem 7rem -4rem $pink-1;
+			box-shadow: inset 0 -45vw 20vw -25vw $pink-1;
 			background-size: 100% 100%;
 		}
 
 		.pricedekho {
 			background: url(../img/portfolio/portfolio_4.jpg);
-			box-shadow: inset 0 -17rem 7rem -4rem $pink-2;
+			box-shadow: inset 0 -45vw 20vw -25vw $pink-2;
 			background-size: 100% 100%;
 		}
 
@@ -70,20 +69,17 @@
 	}
 
 	&-item {
-		width: calc(100%/4 - 2px);
+		width: 100%;
 		position: relative;
 	
-		@include respond-to(mobiles) {
-			width: 100%;
-		}
 	}	
 
 	&-title {
 		position: absolute;
-		bottom: 13%;
-		left: 5%;
+		bottom: 14.2%;
+		left: 6%;
 		font-family: $global-font-family;
-		font-size: 4rem;
+		font-size: 4.5vw;
 		font-weight: 500;
 		color: $white-1;
 	}
@@ -91,9 +87,9 @@
 	&-description {
 		position: absolute;
 		bottom: 7%;
-		left: 5%;
+		left: 6%;
 		font-family: $global-font-family;
-		font-size: 3.5rem;
+		font-size: 3.5vw;
 		font-weight: 500;
 		color: $white-1;	
 	}
