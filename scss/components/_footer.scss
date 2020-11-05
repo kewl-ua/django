@@ -1,17 +1,19 @@
 .footer {
-
 	background-color: $gray-1;
-
+	color: $white-1;
 
 	&-wrapper {
-		@include site-width;
 		margin: 0 auto;
 		padding: 30px 0 40px;
+
+		@include site-width;
 	}
 
 	&-inner {
 		display: flex;
 		justify-content: space-beetwen;
+		align-items: center;
+		margin-bottom: 20px;
 	}
 
 	.nav-list {
@@ -26,9 +28,12 @@
 	.contact-list, .social-list {
 		display: flex;
 		justify-content: flex-start;
+		font-size: 1vw;
+		font-weight: 400;
 
 		.copyright {
-			margin-right: 12.14%
+			font-weight: 300;
+			margin-right: 12.14%;
 		}
 
 		.phone {
