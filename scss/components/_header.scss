@@ -66,10 +66,11 @@
     }
 
     &-description {
-        margin-top: 5px;
+        margin-top: 10px;
         font-size: rem(24px);
 
         @include respond-to(mobiles) {
+            margin-top: 20px;
             font-size: 4vw;
         }
     }
@@ -241,6 +242,18 @@
 
         @include respond-to(mobiles) {
             font-size: 3.7vw;
+        }
+    }
+
+    &-facebook {
+        @include respond-to(mobiles) {
+            @include prefix(order, 4);
+        }
+    }
+
+    &-crm {
+        @include respond-to(mobiles) {
+            @include prefix(order, 3);
         }
     }
 }
