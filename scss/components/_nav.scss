@@ -62,6 +62,10 @@
             font-size: rem(16px);
             flex-direction: column;
         }
+
+        &-footer {
+            font-weight: normal;
+        }
     }
 
     &-item {

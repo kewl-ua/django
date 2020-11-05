@@ -14,10 +14,9 @@
     }
 
     &-video {
+        @include position(absolute, 50%, auto, auto, 50%);
+
         z-index: -1;
-        position: absolute;
-        left: 50%;
-        top: 50%;
         transform: translate(-50%, -50%);
 
         @include respond-to(desktop) {
