@@ -6,6 +6,21 @@ font-size: rem(22);
     @return ($px / $base) * 1rem;
 }
 
+@mixin site-width($width: $global-site-width) {
+    margin: 0 auto;
+    max-width: $width;
+
+    @include respond-to(mobiles) {
+        padding-left: $global-mobile-padding;
+        padding-right: $global-mobile-padding;
+    }
+
+    @include respond-to(tablet) {
+        padding-left: $global-tablet-padding;
+        padding-right: $global-tablet-padding;
+    }
+}
+
 /*
 @include respond-to(tablet) {
     .header {
@@ -49,7 +64,7 @@ font-size: rem(22);
         }
     }
 
-    /* 1024+ */
+    /* 1024-1919 */
     @if $device == desktop {
         @media only screen and (min-width: $desktop) {
             @content;
@@ -72,23 +87,37 @@ font-size: rem(22);
     vertical-align: $vertical;
 }
 
+@mixin font($size: $global-font-size, $weight: normal, $style: normal, $line-height: normal) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    line-height: $line-height;
+}
 
-@mixin site-width($width: $global-site-width) {
-    margin: 0 auto;
-    max-width: $width;
+@mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
 
-    /*
-    @include respond-to(mobile) {
-        padding: 0 $global-mobile-padding;
-    }
 
-    @include respond-to(tablet) {
-        padding: 0 $global-tablet-padding;
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{'-' + $vendor + '-' + $property}: #{$value};
+        }
     }
-    
-    @include respond-to(desktop) {
-        padding: 0 $global-desktop-padding;
+    #{$property}: #{$value};
+}
+
+@mixin box-shadow($top: 0, $left: 0, $blur: 4px, $color: transparent, $inset: false) {
+    @if $inset {
+        @include prefix(box-shadow, inset $top $left $blur $color);
     }
-    */
+    @else {
+        @include prefix(box-shadow, $top $left $blur $color);
+    }
 }
 
