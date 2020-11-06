@@ -3,7 +3,6 @@
 	padding: 5.2% 0 9.375%;
 	
 	@include respond-to(mobiles) {
-		@include site-width;
 		border: none;
 	}
 
