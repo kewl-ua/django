@@ -65,6 +65,12 @@
 
         &-footer {
             font-weight: normal;
+
+            @include respond-to(mobiles) {
+                padding: 0 30px;
+                font-size: 3.2vw;
+                flex-flow: row wrap;
+            }
         }
     }
 
@@ -95,6 +101,18 @@
 
             & + & {
                 margin: 30px 0 0;
+            }
+        }
+
+        &-footer {
+            @include respond-to(mobiles) {
+                list-style: none;
+                border-bottom: 2px solid transparent;
+
+                & + & {
+                    margin: 0;
+                    margin-left: 11.75%;
+                }
             }
         }
     }

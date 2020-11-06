@@ -8,6 +8,11 @@
 
 		display: flex;
 		justify-content: space-between;
+
+		@include respond-to(mobiles) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&-nav {
@@ -19,66 +24,20 @@
 	&-copyright {
 		@include font(rem(14px), 300);
 
+		@include respond-to(mobiles) {
+			order: 3;
+		}
+
 		&-text {
 			margin-top: 20px;
 		}
 	}
 
 	&-socials {
-		padding-top: 6px;
-	}
-}
+		padding-top: 7px;
 
-.social {
-	&-list {
-		display: flex;
-		font-size: 0;
-	}
-
-	&-item {
-		& + & {
-			margin-left: 20px;
-		}
-	}
-
-	&-link {
-		&:hover {
-			color: $green-1;
-		}
-
-		&::before {
-			font-size: rem(12px);
-		}
-	}
-}
-
-.contact {
-	&-list {
-		@include font(rem(18px), 500);
-
-		display: flex;
-		margin-top: 20px;
-	}
-
-	&-item {
-		& + & {
-			margin-left: 40px;
-		}
-	}
-
-	&-link {
-		padding-left: 25px;
-		position: relative;
-
-		&:hover {
-			color: $green-1;
-		}
-
-		&::before {
-			@include position(absolute, 50%, auto, auto, 0);
-			@include prefix(transform, translateY(-50%));
-
-			color: $green-1;
+		@include respond-to(mobiles) {
+			order: 2;
 		}
 	}
 }
