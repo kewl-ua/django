@@ -3,6 +3,10 @@
 	color: $white-1;
 	background-color: $gray-1;
 
+	@include respond-to(mobiles) {
+		padding-top: 20px;
+	}
+
 	&-inner {
 		@include site-width;
 
