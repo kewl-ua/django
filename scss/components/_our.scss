@@ -51,6 +51,7 @@
 	&-info{
 		display: flex;
 		flex-flow: column wrap;
+		flex-grow: 1;
 	}
 	&-title{
 		font-size: 2.4rem;
@@ -58,9 +59,11 @@
 		color: $white-1;
 		margin-bottom: 30px;
 
+
 		@include respond-to(mobiles){
 			font-size: 1.6rem;
 			margin-bottom: 15px;
+			flex-grow: 1;
 		}
 	}
 	&-btn{
@@ -176,6 +179,7 @@
 			overflow-y: scroll;
 			padding: 0;
 			width: 152%;
+			padding: 0 30px;
 		}
 	}
 	&-item{
