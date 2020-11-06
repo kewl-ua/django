@@ -1,0 +1,127 @@
+.nav {
+    @include respond-to(mobiles) {
+        @include position(fixed, 0, auto, 0, -100%);
+
+        transition: left .3s ease-in .1s;
+        z-index: 999;
+    }
+
+    &-inner {
+        @include respond-to(mobiles) {
+            height: 100%;
+            width: 250px;
+            padding-top: 18px;
+            background: $gray-1;
+        }
+    }
+
+    &-overlay {
+        @include position(fixed, 0, 0, 0, 0);
+
+        transition: background-color .3s ease-in;
+        z-index: -2;
+        background-color: rgba(0,0,0,0);
+    }
+
+    &-toggle {
+        display: none;
+
+        @include respond-to(mobiles) {
+            &:checked {
+                ~ .nav {
+                    left: 0;
+                }
+
+                ~ .nav-overlay {
+                    z-index: 3;
+                    background-color: $dark-3;
+                }
+            }
+        }
+    }
+
+    &-label {
+        font-size: rem(20px);
+        color: $white-1;
+        display: none;
+
+        @include respond-to(mobiles) {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &-list {
+        @include font(rem(14px), 700);
+
+        display: flex;
+        text-transform: uppercase;
+
+        @include respond-to(mobiles) {
+            padding: 30px;
+            font-size: rem(16px);
+            flex-direction: column;
+        }
+
+        &-footer {
+            font-weight: normal;
+
+            @include respond-to(mobiles) {
+                padding: 0 30px;
+                font-size: 3.2vw;
+                flex-flow: row wrap;
+            }
+        }
+    }
+
+    &-item {
+        /* To prevent border affecting header-nav items position. */
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+
+        &.active,
+        &:hover {
+            color: $green-1;
+            border-bottom-color: currentColor;
+        }
+
+        & + & {
+            margin-left: 40px;
+        }
+
+        @include respond-to(devices) {
+            & + & {
+                margin-left: 20px;
+            }
+        }
+
+        @include respond-to(mobiles) {
+            border: none;
+            list-style: disc;
+
+            & + & {
+                margin: 30px 0 0;
+            }
+        }
+
+        &-footer {
+            @include respond-to(mobiles) {
+                list-style: none;
+                border-bottom: 2px solid transparent;
+                margin-top: 10px;
+
+                & + & {
+                    margin-top: 10px;
+                    margin-left: 11.75%;
+                }
+            }
+        }
+    }
+
+    &-link {
+        @include respond-to(tablet) {
+            font-size: 1.6vw;
+        }
+    }
+}

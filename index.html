@@ -11,67 +11,82 @@
 
     <body>
         <header class="header">
-            <video class="header-video" loop autoplay muted>
-                <source src="video/bg.mp4" type="video/mp4">
+            <video class="header-video" loop autoplay muted playsinline>
+				<source src="video/bg.mp4" type="video/mp4">
+				<source src="video/bg-s.mp4" type="video/mp4"> <!-- Safari case -->
+				<source src="video/bg.webm" type="video/webm">
+				<source src="video/bg.ogv" type="video/ogv">
+				<img src="img/bg.jpg" alt="Sorry your browser does not support HTML5 video">
             </video>
 
             <div class="header-inner">
                 <div class="header-nav">
+					<input class="nav-toggle" id="nav-toggle" type="checkbox">
+					<label class="nav-label icon-burger" for="nav-toggle"></label>
+					<label class="nav-overlay" for="nav-toggle"></label>
+                    
                     <a href="#" class="logo">
-                        Django<span class="logo-thin">Bridge</span>
+						<picture>
+							<source srcset="img/logo.png" media="(min-width: 768px)">
+							<img src="img/logo-s.png" alt="Django Bridge" class="logo-image">
+						</picture>
                     </a>
-        
+					
                     <nav class="nav">
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Clients</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Ideas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Contact us</a>
-                            </li>
-                        </ul>
+						<div class="nav-inner">
+							<label class="logo-side" for="nav-toggle"></label>
+
+							<ul class="nav-list">
+								<li class="nav-item active">
+									<a href="#" class="nav-link">Home</a>
+								</li>
+								<li class="nav-item">
+									<a href="#portfolio" class="nav-link">Portfolio</a>
+								</li>
+								<li class="nav-item">
+									<a href="#features" class="nav-link">About us</a>
+								</li>
+								<li class="nav-item">
+									<a href="#clients" class="nav-link">Clients</a>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Ideas</a>
+								</li>
+								<li class="nav-item">
+									<a href="#blog" class="nav-link">Blog</a>
+								</li>
+								<li class="nav-item">
+									<a href="#feedback" class="nav-link">Contact us</a>
+								</li>
+							</ul>
+						</div>
                     </nav>
                 </div>
     
                 <div class="header-text">
                     <h2 class="header-title">Custom web and mobile apps development</h2>
                     <p class="header-description">
-                        for Enterprises, ISV&acute; s & SaaS Companies, Start-ups and Digital Agencies
+                        for Enterprises, ISV&acute;s & SaaS Companies, Start-ups and Digital Agencies
                     </p>
                 </div>
     
                 <div class="header-services">
                     <ul class="services">
-                        <li class="service icon-monitor">
+                        <li class="service service-web icon-monitor">
                             <h3 class="service-title">Web</h3>
                             <p class="service-description">Application Development</p>
                         </li>
-                        <li class="service icon-mobile">
+                        <li class="service service-mobile icon-mobile">
                             <h3 class="service-title">Mobile</h3>
                             <p class="service-description">Application Development</p>
                         </li>
-                        <li class="service icon-facebook">
+                        <li class="service service-facebook icon-facebook">
                             <h3 class="service-title">Facebook</h3>
                             <p class="service-description">Application Development</p>
                         </li>
-                        <li class="service icon-user">
+                        <li class="service service-crm icon-user">
                             <h3 class="service-title">CRM</h3>
-                            <p class="service-description">Application Development</p>
+                            <p class="service-description">Development & Integration</p>
                         </li>
                     </ul> 
                 </div>
@@ -143,41 +158,52 @@
 			</div>
 
 			<div class="portfolio">
-				<div class="portfolio-inner">
-	                <h3 class="title"><span class="title-accent">our</span> portfolio</h3>
+				<h3 class="title"><span class="title-accent">our</span> portfolio</h3>
 
+				<div class="portfolio-inner">
 	                <ul class="portfolio-list">
 	                    <li class="portfolio-item las-insurance">
-	                        <h5 class="portfolio-title">LAS INSURANCE</h5>
-	                        <p class="portfolio-description">Business, Navigation</p>
+	                    	<a href="" class="portfolio-link">
+	                    		<h5 class="portfolio-title">LAS INSURANCE</h5>
+	                        	<p class="portfolio-description">Business, Navigation</p>
+	                    	</a>
 	                    </li>
 	                    <li class="portfolio-item college-push">
-	                    	<h5 class="portfolio-title">COLLEGE PUSH</h5>
-	                    	<p class="portfolio-description">Education</p>
+	                    	<a href="" class="portfolio-link">
+	                    		<h5 class="portfolio-title">COLLEGE PUSH</h5>
+	                    		<p class="portfolio-description">Education</p>
+	                    	</a>
 	                    </li>
 	                    <li class="portfolio-item kitovu-app">
-	                        <h5 class="portfolio-title">KITOVU APP</h5>
-	                        <p class="portfolio-description">Education, Social Networking</p>
+	                    	<a href="" class="portfolio-link">
+	                    		<h5 class="portfolio-title">KITOVU APP</h5>
+	                        	<p class="portfolio-description">Education, Social Networking</p>
+	                    	</a>
 	                    </li>
 	                    <li class="portfolio-item pricedekho">
-	                        <h5 class="portfolio-title">PRICEDEKHO</h5>
-	                        <p class="portfolio-description">Business, Social Networking</p>
+	                    	<a href="" class="portfolio-link">
+	                    		<h5 class="portfolio-title">PRICEDEKHO</h5>
+	                       		<p class="portfolio-description">Business, Social Networking</p>
+	                    	</a>
 	                    </li> 
 	                </ul>
-            	</div>
+           		</div>
 			</div>
 
 			<div class="our">
 				<div class="our-inner">
-
 					<div class="our-blog">
-						<h3 class="title"><span class="title-accent">Our</span> blog</h3>
+						<h3 class="title">
+                            <span class="title-accent">Our</span> blog
+                        </h3>
+
 						<ul class="blog-list">
 							<li class="blog-item web">
 								<div class="blog-topic">
 									<span class="topic"><span class="topic-num">10</span>Aug</span>
 									<span class="topic-name">Web</span>
-								</div>
+                                </div>
+
 								<div class="blog-info">
 									<h4 class="blog-title">Ember.js is a solid single application framework</h4>
 									<a href="" class="blog-btn">Read more</a>
@@ -187,7 +213,8 @@
 								<div class="blog-topic">
 									<span class="topic"><span class="topic-num">12</span>Jun</span>
 									<span class="topic-name">Mobile</span>
-								</div>
+                                </div>
+
 								<div class="blog-info">		
 									<h4 class="blog-title">45 Github Issues Dos and Don'ts</h4>
 									<a href="" class="blog-btn">Read more</a>
@@ -197,7 +224,8 @@
 								<div class="blog-topic">
 									<span class="topic"><span class="topic-num">8</span>May</span>
 									<span class="topic-name">CRM</span>
-								</div>
+                                </div>
+
 								<div class="blog-info">																	
 									<h4 class="blog-title">JavaScript Promises</h4>
 									<a href="" class="blog-btn">Read more</a>
@@ -207,7 +235,8 @@
 								<div class="blog-topic">
 									<span class="topic"><span class="topic-num">14</span>Aug</span>
 									<span class="topic-name">CRM</span>
-								</div>
+                                </div>
+
 								<div class="blog-info">
 									<h4 class="blog-title">Bind Function</h4>
 									<a href="" class="blog-btn">Read more</a>
@@ -217,105 +246,120 @@
 					</div>
 
 					<div class="our-clients">
-						<h3 class="title"><span class="title-accent">Our</span> clients</h3>
-						<ul class="clients-list">
-							<li class="clients-item">
-								<a href="" class="clients-link">
-									Afnic
-									<img width="89px" src="img/our/afnic.svg" alt="">
-								</a>
-							</li>
-							<li class="clients-item">
-								<a href="https://www.instagram.com/" class="clients-link">
-									Instagram
-									<img width="128px" src="img/our/instagram.svg" alt="">
-								</a>
-							</li>
-							<li class="clients-item">
-								<a href="" class="clients-link">
-									Logitec
-									<img width="108px" src="img/our/logitech.svg" alt="">
-								</a>
-							</li>
-							<li class="clients-item">
-								<a href="" class="clients-link">
-									Django
-									<img width="91px" src="img/our/django.svg" alt="">
-							</a>
-							</li>
-							<li class="clients-item">
-								<a href="" class="clients-link">
-									SP
-									<img width="64px" src="img/our/sp.svg" alt="">
-								</a>
-							</li>
-						</ul> 
+                        <h3 class="title">
+                            <span class="title-accent">Our</span> clients
+                        </h3>
+                        <div class="clients-wrap">
+                        	<ul class="clients-list">
+                        		<li class="clients-item">
+                        			<a href="" class="clients-link">
+                        				Afnic
+                        				<img class="clients-img" src="img/blog/afnic.png" alt="">
+                        			</a>
+                        		</li>
+                        		<li class="clients-item">
+                        			<a href="https://www.instagram.com/" class="clients-link">
+                        				Instagram
+                        				<img class="clients-img" src="img/blog/instagram.png" alt="">
+                        			</a>
+                        		</li>
+                        		<li class="clients-item">
+                        			<a href="" class="clients-link">
+                        				Logitec
+                        				<img class="clients-img" src="img/blog/logitech.png" alt="">
+                        			</a>
+                        		</li>
+                        		<li class="clients-item">
+                        			<a href="" class="clients-link">
+                        				Django
+                        				<img class="clients-img" src="img/blog/django.png" alt="">
+                        		</a>
+                        		</li>
+                        		<li class="clients-item">
+                        			<a href="" class="clients-link">
+                        				SP
+                        				<img class="clients-img" src="img/blog/sp.png" alt="">
+                        			</a>
+                        		</li>
+                        	</ul> 
+                        </div>
+						
 					</div>
-
 				</div>
 			</div>
-			
-
 		</main>
 
 		<footer class="footer">
-            <div class="footer-wrapper">
-                <div class="footer-inner">
+			<div class="footer-inner">
+				<div class="footer-copyright">
+					<a href="#" class="logo logo-footer">
+						<img src="img/logo-s.png" alt="Django Bridge" class="logo-image">
+					</a>
 
-                    <div class="footer-logo">
-                        <a href="#" class="logo-link">
-                            <img src="img/logo_img.png" alt="Django Bridge" class="logo-img">
-                        </a>
-                    </div>
+					<div class="footer-copyright-text">
+						&copy; 2016 Django Bridge
+					</div>
+				</div>
 
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#home" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Clients</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Ideas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Contact us</a>
-                        </li>
-                    </ul>
+				<div class="footer-nav">
+					<ul class="nav-list nav-list-footer">
+						<li class="nav-item nav-item-footer active">
+							<a href="#" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#portfolio" class="nav-link">Portfolio</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#features" class="nav-link">About us</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#" class="nav-link">Ideas</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#clients" class="nav-link">Clients</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#blog" class="nav-link">Blog</a>
+						</li>
+						<li class="nav-item nav-item-footer">
+							<a href="#feedback" class="nav-link">Contact us</a>
+						</li>
+					</ul>
 
-                    <ul class="social-list">
-                        <li class="social-item">
-                            <a href="" class="social-link facebook">facebook</a>
-                        </li>
-                        <li class="social-item">
-                            <a href="" class="social-link twitter">twitter</a>
-                        </li>
-                        <li class="social-item">
-                            <a href="" class="social-link linkedin">linkedin</a>
-                        </li>
-                    </ul>
-                </div>
+					<ul class="contact-list">
+						<li class="contact-item">
+							<a href="tel:08453710339" class="contact-link icon-phone">
+								0845 371 0339
+							</a>
+						</li>
+						<li class="contact-item">
+							<a href="mailto:hello@keyua.com" class="contact-link icon-mail">
+								hello@keyua.com
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                <div class="copyright-inner">   
-
-                    <ul class="contact-list">
-                        <li class="copyright">© 2016 Django Bridge</li>
-                        <li class="phone">0845 371 0339</li>
-                        <li class="email">hello@keyua.com</li>
-                    </ul>    
-                </div>
-            </div>
-			
+				<div class="footer-socials">
+					<ul class="social-list">
+						<li class="social-item">
+							<a href="#" class="social-link icon-facebook-square">
+								Facebook
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" class="social-link icon-twitter">
+								Twitter
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="#" class="social-link icon-linkedin">
+								Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</footer>
-
     </body>
 </html>
