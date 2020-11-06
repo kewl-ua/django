@@ -7,6 +7,9 @@
 	}
 	&-inner{
 		@include site-width;
+		@include respond-to(mobiles){
+			padding: 0;
+		}	
 	}
 	&-clients{
 		@include respond-to(mobiles){
@@ -51,7 +54,10 @@
 	&-info{
 		display: flex;
 		flex-flow: column wrap;
+		@include respond-to(mobiles){
 		flex-grow: 1;
+			
+		}
 	}
 	&-title{
 		font-size: 2.4rem;
