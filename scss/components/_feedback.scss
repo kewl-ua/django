@@ -45,6 +45,10 @@
     &-map {
         width: 100%;
         height: 100%;
+
+        @include respond-to(mobiles){
+            height: 330px;
+        }
     }
 
     &-content {
