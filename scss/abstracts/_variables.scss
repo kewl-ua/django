@@ -1,18 +1,22 @@
 /* Globals */
 $global-font-size: 10px;
-$global-font-family: 'Nunito Sans', sans-serif;
+$global-font-family: 'Futura PT', sans-serif;
 $global-site-width: 1024px;
+$global-mobile-padding: 15px;
+$global-tablet-padding: 20px;
 
 /* Colors */
-$green-1: #89b61e;
 $white-1: #ffffff;
 $gray-1: #666666;
 $gray-2: #cccccc;
 $red-1: #ae555d;
-$blue-1: #4865b9;
 $pink-1: #7f3a6a;
 $pink-2: #614d73;
-
+$green-1: #89b61e;
+$blue-1: #4865b9;
+$dark-1: rgba(0,0,0,.2);
+$dark-2: rgba(0,0,0,.6);
+$dark-3: rgba(0,0,0,.7);
 
 /* Media */
 $mobile-portrait: 320px; /* Vertically oriented phone */

@@ -1,0 +1,56 @@
+.services {
+    display: flex;
+    justify-content: space-around;
+
+    @include respond-to(mobiles) {
+        flex-wrap: wrap;
+    }
+}
+
+.service {
+    width: 170px;
+    padding-left: 68px;
+    position: relative;
+
+    @include respond-to(mobiles) {
+        width: 40%;
+        margin-top: 40px;
+        padding-left: 60px;
+    }
+
+    &::before {
+        @include position(absolute, 0, auto, auto, 0);
+
+        font-size: rem(45px);
+        color: $green-1;
+    }
+
+    &-title {
+        @include font(rem(24px), 500);
+
+        @include respond-to(mobiles) {
+            font-size: 4.2vw;
+        }
+    }
+
+    &-description {
+        margin-top: 5px;
+        font-size: rem(16px);
+
+        @include respond-to(mobiles) {
+            font-size: 3.7vw;
+        }
+    }
+
+    &-facebook {
+        @include respond-to(mobiles) {
+            @include prefix(order, 4);
+        }
+    }
+
+    &-crm {
+        @include respond-to(mobiles) {
+            @include prefix(order, 3);
+        }
+    }
+}

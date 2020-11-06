@@ -3,12 +3,16 @@
 
 @import "base/fonts";
 @import "base/reset";
-@import "base/titles";
 @import "base/tags";
 
 /* General */
 @import "components/icon";
-// @import "components/title";
+@import "components/title";
+@import "components/logo";
+@import "components/nav";
+@import "components/social-list";
+@import "components/contact-list";
+@import "components/services";
 
 /* Layout */
 @import "components/header";
