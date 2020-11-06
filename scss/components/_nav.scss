@@ -1,9 +1,9 @@
 .nav {
     @include respond-to(mobiles) {
-        @include position(fixed, 0, 100%, 0);
+        @include position(fixed, 0, auto, 0, -100%);
 
+        transition: left .3s ease-in .1s;
         z-index: 999;
-        background: $dark-3;
     }
 
     &-inner {
@@ -15,25 +15,26 @@
         }
     }
 
+    &-overlay {
+        @include position(fixed, 0, 0, 0, 0);
+
+        transition: background-color .3s ease-in;
+        z-index: -2;
+        background-color: rgba(0,0,0,0);
+    }
+
     &-toggle {
         display: none;
 
         @include respond-to(mobiles) {
             &:checked {
                 ~ .nav {
-                    right: 0;
                     left: 0;
                 }
 
-                ~ .nav .logo-side {
-                    position: static;
-                }
-
-                ~ .nav .nav-overlay {
-                    @include position(absolute, 0, 0, 0, 0);
-            
-                    background-color: rgba(0,0,0,.4);
-                    z-index: -1;
+                ~ .nav-overlay {
+                    z-index: 3;
+                    background-color: $dark-3;
                 }
             }
         }

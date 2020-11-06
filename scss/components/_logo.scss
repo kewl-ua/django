@@ -6,8 +6,6 @@
     }
 
     &-side {
-        display: none;
-
         @include respond-to(mobiles) {
             display: block;
             width: 100%;
