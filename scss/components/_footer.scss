@@ -7,18 +7,25 @@
 		@include site-width;
 
 		display: flex;
-		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&-nav {
 		display: flex;
+		flex-flow: column wrap;
 		justify-content: space-between;
-		align-items: center;
 	}
 
-	&-contacts {
-		display: flex;
-		align-items: space-between;
+	&-copyright {
+		@include font(rem(14px), 300);
+
+		&-text {
+			margin-top: 20px;
+		}
+	}
+
+	&-socials {
+		padding-top: 6px;
 	}
 }
 
@@ -35,6 +42,10 @@
 	}
 
 	&-link {
+		&:hover {
+			color: $green-1;
+		}
+
 		&::before {
 			font-size: rem(12px);
 		}
@@ -46,6 +57,7 @@
 		@include font(rem(18px), 500);
 
 		display: flex;
+		margin-top: 20px;
 	}
 
 	&-item {
@@ -58,15 +70,15 @@
 		padding-left: 25px;
 		position: relative;
 
+		&:hover {
+			color: $green-1;
+		}
+
 		&::before {
 			@include position(absolute, 50%, auto, auto, 0);
+			@include prefix(transform, translateY(-50%));
 
-			transform: translateY(-50%);
 			color: $green-1;
 		}
 	}
-}
-
-.copyright {
-	@include font(rem(14px), 300);
 }
