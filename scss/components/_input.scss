@@ -1,0 +1,40 @@
+.input {
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $white-1;
+    color: $white-1;
+    background-color: transparent;
+    
+    @include respond-to(mobiles) {
+        font-size: rem(16px);
+    }
+    
+    &:focus {
+        border-bottom-width: 2px;
+    }
+    
+    &::placeholder {
+        color: $white-1;
+    }
+}
+
+.input-feedback {
+    width: calc(50% - 20px);
+    margin-top: 38px;
+    background: $green-1;
+
+    & + & {
+        margin-left: 20px;
+
+        @include respond-to(mobiles){
+            margin: 0 0 28px;
+        }
+    }
+
+    @include respond-to(mobiles) {
+        width: 100%;
+        margin-bottom: 28px;
+        margin-top: 30px;
+    }
+}

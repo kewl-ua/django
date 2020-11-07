@@ -1,26 +1,6 @@
-%input-base {
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    color: #ffffff;
-    padding: 10px 0;
-
-    @include respond-to(mobiles) {
-        font-size: 1.6rem;
-    }
-
-    &:focus {
-        border-bottom-width: 2px;
-    }
-
-    &::placeholder {
-        color: #ffffff;
-    }
-}
-
 .feedback {
-    color: #ffffff;
     height: 420px;
+    color: $white-1;
     position: relative;
     
     @include respond-to(mobiles) {
@@ -52,32 +32,29 @@
     }
 
     &-content {
+        @include position(absolute, 0, 26.7%, 0, auto);
+
         display: flex;
         flex-direction: column;
         width: 512px;
-        top: 0;
-        right: 26.7%;
-        transform: translateX(50%);
-        bottom: 0;
-        position: absolute;
         padding: 30px 25px;
-        background: #89b61e;
+        transform: translateX(50%);
+        background: $green-1;
         z-index: 2;
 
         @include respond-to(mobiles) {
-            position: static;
-            transform: none;
             width: 100%;
             padding: 45px 15px 30px;
+            position: static;
+            transform: none;
         }
     }
 
     &-title {
-        font-weight: 500;
-        font-size: 24px;
+        @include font(rem(24px), 500);
 
         @include respond-to(mobiles) {
-            font-size: 2.2rem;
+            font-size: rem(22px);
             text-align: center;
         }
     }
@@ -89,7 +66,7 @@
         
         @include respond-to(mobiles) {
             width: 100%;
-            font-size: 1.6rem;
+            font-size: rem(16px);
         }
     }
 
@@ -99,45 +76,6 @@
         
         @include respond-to(mobiles) {
             display: block;
-        }
-    }
-
-    &-input {
-
-        width: calc(50% - 20px);
-        background: #89b61e;
-        border-bottom: 1px solid white;
-        padding-bottom: 10px;
-        margin-top: 38px;
-        outline: none;
-        
-        @extend %input-base;
-
-        & + & {
-            margin-left: 20px;
-
-            @include respond-to(mobiles){
-                margin: 0 0 28px;
-            }
-        }
-
-        @include respond-to(mobiles) {
-            width: 100%;
-            margin-bottom: 28px;
-            margin-top: 30px;
-        }
-    }
-    
-    &-textarea {
-        width: 100%;
-        background: #89b61e;
-        resize: none;
-        margin-top: 24px;
-
-        @extend %input-base;
-
-        @include respond-to(mobiles) {
-            margin: 0 0 50px;
         }
     }
 }

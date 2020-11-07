@@ -303,15 +303,12 @@
 
                 <form class="feedback-form" method="POST" action="/feedback.php">
                     <div class="feedback-inputs">
-                        <input class="feedback-input" type="text" placeholder="Name">
-                        <input class="feedback-input" type="email" placeholder="Email">
+                        <input class="input input-feedback" name="name" type="text" placeholder="Name">
+                        <input class="input input-feedback" name="email" type="email" placeholder="Email">
                     </div>
 
-					<textarea class="input feedback-textarea" rows="1" placeholder="Your message"></textarea>
-					
-					<button class="button button-feedback">
-						Send
-					</button>
+					<textarea class="textarea textarea-feedback" rows="1" placeholder="Your message"></textarea>
+					<button class="button button-feedback">Send</button>
                 </form>
             </div>
         </div>
