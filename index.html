@@ -94,8 +94,7 @@
         </header>
 
         <main class="main">
-        	
-			<div class="features">
+			<div class="features" id="features">
 				<a href="#features" class="scroll"><img src="img/scroll.png"></a>
 				<div class="features-inner" id="features">
 					<h3 class="title">
@@ -157,7 +156,7 @@
 				</div>
 			</div>
 
-			<div class="portfolio">
+			<div class="portfolio" id="portfolio">
 				<h3 class="title"><span class="title-accent">our</span> portfolio</h3>
 
 				<div class="portfolio-inner">
@@ -192,7 +191,7 @@
 
 			<div class="our">
 				<div class="our-inner">
-					<div class="our-blog">
+					<div class="our-blog" id="blog">
 						<h3 class="title">
                             <span class="title-accent">Our</span> blog
                         </h3>
@@ -245,7 +244,7 @@
 						</ul>
 					</div>
 
-					<div class="our-clients">
+					<div class="our-clients" id="clients">
                         <h3 class="title">
                             <span class="title-accent">Our</span> clients
                         </h3>
@@ -289,31 +288,29 @@
 			</div>
 		</main>
 
-		<div class="feedback">
+		<div class="feedback" id="feedback">
             <div class="feedback-location">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d162553.53550014293!2d30.417191659374996!3d50.46160558123982!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1604485999937!5m2!1sru!2sua"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.0212525652146!2d30.53045631249217!3d50.436746145680296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf07295b8e39%3A0x41f43bbd96473152!2z0JrQvtC80L_RjNGO0YLQtdGA0L3QsNGPINGI0LrQvtC70LAgSGlsbGVs!5e0!3m2!1sru!2sua!4v1604707568686!5m2!1sru!2sua"
                     class="feedback-map" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe> 
+				</iframe> 
             </div>
         
             <div class="feedback-content">
                 <p class="feedback-title">Interested in working with us? GREAT!</p>
 
-                <form class="feedback-form">
+                <form class="feedback-form" method="POST" action="/feedback.php">
                     <div class="feedback-inputs">
                         <input class="feedback-input" type="text" placeholder="Name">
-                        <input class="feedback-input" type="text" placeholder="Email">
+                        <input class="feedback-input" type="email" placeholder="Email">
                     </div>
 
-                    <textarea class="feedback-textarea" rows="1" placeholder="Your message"></textarea>
+					<textarea class="input feedback-textarea" rows="1" placeholder="Your message"></textarea>
+					
+					<button class="feedback-btn">
+						SEND
+					</button>
                 </form>
-
-                <div class="feedback-button">
-                    <a href="#" class="feedback-link">
-                        SEND
-                    </a>
-                </div>
             </div>
         </div>
 

@@ -3,7 +3,6 @@
     border-bottom: 1px solid white;
     outline: none;
     color: #ffffff;
-    font: 600 18px Arial, sans-serif;
     padding: 10px 0;
 
     @include respond-to(mobiles) {
@@ -28,6 +27,7 @@
         height: auto;
         display: flex;
         flex-direction: column-reverse;
+        font-size: 0;
     }
 
     &-location {
@@ -73,7 +73,7 @@
     }
 
     &-title {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 24px;
 
         @include respond-to(mobiles) {
@@ -141,21 +141,26 @@
         }
     }
 
-    &-button {
-        padding: 13px;
-        text-align: center;
-        border: 2px solid white;
+    &-btn {
+        @include font(1.8rem, 500);
         display: inline-block;
         width: 205px;
-        font-weight: 600;
+        padding: 6px;
+        margin-top: auto;
+        border: 2px solid white;
+        text-align: center;
+        transition: background-color .3s linear;
+        color: $white-1;
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255,255,255,.2);
+        }
 
         @include respond-to(mobiles) {
             width: 100%;
             font-size: 1.6rem;
         }
-    }
-
-    &-link {
-        color: #ffffff;
     }
 }
