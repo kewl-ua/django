@@ -1,40 +1,45 @@
-.our{
+.our {
 	border-top: 2px solid $gray-2;
 	padding: 110px 0 100px;
 
-	@include respond-to(mobiles){
+	@include respond-to(mobiles) {
 		border: none;
 	}
-	&-inner{
+
+	&-inner {
 		@include site-width;
-		@include respond-to(mobiles){
+
+		@include respond-to(mobiles) {
 			padding: 0;
 		}	
 	}
-	&-clients{
-		@include respond-to(mobiles){
-				width: 100%;
-				padding: 0 30px;
-			}
+
+	&-clients {
+		@include respond-to(mobiles) {
+			width: 100%;
+			padding: 0 30px;
+		}
 	}
 }
 
-.blog{
-	&-list{
+.blog {
+	&-list {
 		height: 480px;
 		margin-bottom: 110px;
 
-		@include respond-to(mobiles){
+		@include respond-to(mobiles) {
 			height: 560px;
 		}
-		&::after{
+
+		&::after {
 			content: "";
 			display: block;
 			width: 100%;
 			clear: both;
 		}
 	}
-	&-item{
+
+	&-item {
 		float: left;
 		padding: 30px;
 		display: flex;
@@ -42,122 +47,130 @@
 		justify-content: space-between;
 		margin: 2px;
 
-		@include respond-to(mobiles){
+		@include respond-to(mobiles) {
 			padding: 20px 15px;
 		}
 	}
-	&-topic{
+
+	&-topic {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		width: 100%;
 	}
-	&-info{
+
+	&-info {
 		display: flex;
 		flex-flow: column wrap;
-		@include respond-to(mobiles){
-		flex-grow: 1;
 
+		@include respond-to(mobiles) {
+			flex-grow: 1;
 		}
 	}
-	&-title{
+
+	&-title {
 		font-size: 2.4rem;
 		font-weight: 700;
 		color: $white-1;
 		margin-bottom: 30px;
 
-
-		@include respond-to(mobiles){
+		@include respond-to(mobiles) {
 			font-size: 1.6rem;
 			margin-bottom: 15px;
 			flex-grow: 1;
 		}
 	}
-	&-btn{
+
+	&-btn {
+		max-width: 100px;
+		padding: 5px 0;
+		border: 1px solid $white-1;
 		font-size: 1.4rem;
 		font-weight: 700;
 		color: $white-1;
-		border: 1px solid $white-1;
-		padding: 5px 0;
 		text-align: center;
-		max-width: 100px;
 		transition: 1s;
-		&:hover{
-			background: rgba(40, 40, 40, 0.4);
+
+		&:hover {
+			background: rgba(40, 40, 40, .4);
 		}
 	}
 }
 
-.topic{
-			font-size: 1.4rem;
-			color: $white-1;
-			text-align: center;
+.topic {
+	font-size: 1.4rem;
+	color: $white-1;
+	text-align: center;
 
-			@include respond-to(mobiles){
-				font-size: 1.2rem;
-			}
-			&-num{
-				font-size: 2.4rem;
-				display: block;
+	@include respond-to(mobiles) {
+		font-size: 1.2rem;
+	}
 
-				@include respond-to(mobiles){
-					font-size: 2.2rem;
-				}
-			}
+	&-num {
+		font-size: 2.4rem;
+		display: block;
+
+		@include respond-to(mobiles) {
+			font-size: 2.2rem;
 		}
-		.topic-name{
-			font-size: 1.4rem;
-			font-weight: 600;
-			background: rgba(40, 40, 40, 0.25);
-			color: $white-1;
-			padding: 10px;
-			height: max-content;
+	}
 
-			@include respond-to(mobiles){
-				font-size: 1rem;
-			}
+	&-name {
+		padding: 10px;
+		height: max-content;
+		font-size: 1.4rem;
+		font-weight: 600;
+		background: rgba(40, 40, 40, 0.25);
+		color: $white-1;
+
+		@include respond-to(mobiles){
+			font-size: 1rem;
 		}
+	}
+}
 
-// blog items
-.web{
+.web {
 	background: url(../img/blog/blog1.jpg) no-repeat center/cover;
 	width: calc(50% - 4px);
 	height: calc(100% + 4px);
 
-	@include respond-to(mobiles){
+	@include respond-to(mobiles) {
 		margin-left: 0;
 		width: calc(50% - 2px);
 		height: calc(66% + 5px);
 	}
 }
-.mobile{
+
+.mobile {
 	background: url(../img/blog/blog2.jpg) center/cover no-repeat;
 	width: calc(50% - 4px);
 	height: 50%;
 
-	@include respond-to(mobiles){
+	@include respond-to(mobiles) {
 		margin-right: 0;
 		width: calc(50% - 2px);
 		height: calc(33.33% - 1px);
 	}
 }
-.crm{
+
+.crm {
 	background: url(../img/blog/blog3.jpg) no-repeat center/cover;
 	width: calc(25% - 4px);
 	height: 50%;
 
-	@include respond-to(mobiles){
+	@include respond-to(mobiles) {
 		margin-right: 0;
 		width: calc(50% - 2px);
 		height: calc(33.33% - 2px);
 	}
 }
-.crm1{
+
+.crm1 {
 	background: url(../img/blog/blog4.jpg) no-repeat center/cover;
 	width: calc(25% - 4px);
 	height: 50%;
 
-	@include respond-to(mobiles){
+	@include respond-to(mobiles) {
 		margin-left: 0;
 		margin-right: 0;
 		width: 100%;
@@ -165,49 +178,49 @@
 	}
 }
 
-
-
-.clients{
-
-	&-wrap{
-		@include respond-to(mobiles){
+.clients {
+	&-wrap {
+		@include respond-to(mobiles) {
 			overflow: scroll;
-			// padding: 0 20px;
-			&::-webkit-scrollbar{
-				display: none;
-			}
-		}
-	}
-	&-list{
-		display: flex;
-		justify-content: space-around;
-		padding: 0 70px;
 
-		@include respond-to(mobiles){
-			overflow-x: scroll;
-			padding: 0;
-			width: 152%;
-			// padding: 0 30px;
 			&::-webkit-scrollbar {
 				display: none;
 			}
 		}
 	}
-	&-item{
-		@include respond-to(mobiles){
 
+	&-list {
+		display: flex;
+		justify-content: space-around;
+		padding: 0 70px;
+
+		@include respond-to(mobiles) {
+			overflow-x: scroll;
+			padding: 0;
+			width: 152%;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 	}
-	&-link{
+
+	&-item {
+
+	}
+
+	&-link {
 		font-size: 0;
 	}
-	&-img{
-		transition: 1s; 
-		&:hover{
-			transform: translateY(-25%)
+
+	&-img {
+		transition: 1s;
+
+		&:hover {
+			transform: translateY(-25%);
 		}
 
-		@include respond-to(mobiles){
+		@include respond-to(mobiles) {
 			padding-top: 25px;
 		}
 	}
