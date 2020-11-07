@@ -29,6 +29,10 @@
         @include font(rem(24px), 500);
 
         @include respond-to(mobiles) {
+            font-size: rem(22px);
+        }
+
+        @include respond-to(mobile-landscape) {
             font-size: 4.2vw;
         }
     }
@@ -38,7 +42,11 @@
         font-size: rem(16px);
 
         @include respond-to(mobiles) {
-            font-size: 3.7vw;
+            font-size: rem(18px);
+        }
+
+        @include respond-to(mobile-landscape) {
+            font-size: 3.7w;
         }
     }
 

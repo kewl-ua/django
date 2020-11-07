@@ -34,8 +34,11 @@
             background-color: rgba(255,255,255,.2);
         }
 
-        @include respond-to(mobiles) {
+        @include respond-to(devices) {
             width: 100%;
+        }
+
+        @include respond-to(mobiles) {
             font-size: 1.6rem;
         }
     }

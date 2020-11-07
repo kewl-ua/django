@@ -43,6 +43,11 @@
         background: $green-1;
         z-index: 2;
 
+        @include respond-to(devices) {
+            right: 0;
+            transform: none;
+        }
+
         @include respond-to(mobiles) {
             @include prefix(transform, none);
 
