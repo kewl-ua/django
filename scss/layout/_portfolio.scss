@@ -51,42 +51,38 @@
 		position: relative;
 
 		&.las-insurance {
-			@include box-shadow(0, -15vw, 10vw, -10vw, $blue-1, true);
-
+			box-shadow: inset 0 -15vw 10vw -10vw $blue-1;
 			background-image: url(../img/portfolio/portfolio_1.jpg);
 
 			@include respond-to(mobiles) {
-				@include box-shadow(0, -45vw, 20vw, -25vw, $blue-1, true);
+				box-shadow: inset 0 -45vw 20vw -25vw $blue-1;
 			}
 		}
 
 		&.college-push {
-			@include box-shadow(0, -15vw, 10vw, -10vw, $red-1, true);
-
+			box-shadow: inset 0 -15vw 10vw -10vw $red-1;
 			background-image: url(../img/portfolio/portfolio_2.jpg);
 
 			@include respond-to(mobiles) {
-				@include box-shadow(0, -45vw, 20vw, -25vw, $red-1, true);
+				box-shadow: inset 0 -45vw 20vw -25vw $red-1
 			}
 		}
 
 		&.kitovu-app {
-			@include box-shadow(0, -15vw, 10vw, -10vw, $pink-1, true);
-
+			box-shadow: inset 0 -15vw 10vw -10vw $pink-1;
 			background-image: url(../img/portfolio/portfolio_3.jpg);
 
 			@include respond-to(mobiles) {
-				@include box-shadow(0, -45vw, 20vw, -25vw, $pink-1, true);
+				box-shadow: inset 0 -45vw 20vw -25vw $pink-1;
 			}
 		}
 
 		&.pricedekho {
-			@include box-shadow(0, -15vw, 10vw, -10vw, $pink-2, true);
-
+			box-shadow: inset 0 -15vw 10vw -10vw $pink-2;
 			background-image: url(../img/portfolio/portfolio_4.jpg);
 
 			@include respond-to(mobiles) {
-				@include box-shadow(0, -45vw, 20vw, -25vw, $pink-2, true);
+				box-shadow: inset 0 -45vw 20vw -25vw $pink-2;
 			}
 		}
 	}	
