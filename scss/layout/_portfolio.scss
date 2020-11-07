@@ -1,7 +1,9 @@
 .portfolio {
+	padding-bottom: 180px;
 	border-top: 2px solid $gray-2;
 	
 	@include respond-to(mobiles) {
+		padding: 0;
 		border: none;
 	}
 
