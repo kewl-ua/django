@@ -11,11 +11,7 @@
 		width: 100%;
 
 		@include respond-to(mobiles) {
-			overflow-y: scroll;
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			@include scroll(x);
 		}	
 	}	
 	

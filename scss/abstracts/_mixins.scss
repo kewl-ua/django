@@ -101,3 +101,14 @@
     #{$property}: #{$value};
 }
 
+@mixin scroll($axis) {
+    @if $axis {
+        overflow-#{$axis}: scroll;
+    } @else {
+        overflow: scroll;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

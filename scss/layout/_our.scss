@@ -170,11 +170,7 @@
 .clients {
 	&-wrap {
 		@include respond-to(mobiles) {
-			overflow: scroll;
-
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			@include scroll(x);
 		}
 	}
 
