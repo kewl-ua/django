@@ -17,3 +17,13 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+input,
+textarea,
+button {
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -8,16 +8,19 @@
 /* General */
 @import "components/icon";
 @import "components/title";
+@import "components/button";
+@import "components/input";
+@import "components/textarea";
 @import "components/logo";
 @import "components/nav";
-@import "components/social-list";
-@import "components/contact-list";
+@import "components/socials";
+@import "components/contacts";
 @import "components/services";
 
 /* Layout */
-@import "components/header";
-@import "components/features";
-@import "components/portfolio";
-@import "components/our";
-@import "components/feedback";
-@import "components/footer";
+@import "layout/header";
+@import "layout/features";
+@import "layout/portfolio";
+@import "layout/our";
+@import "layout/feedback";
+@import "layout/footer";

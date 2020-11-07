@@ -1,0 +1,14 @@
+.textarea {
+    width: 100%;
+    margin-top: 24px;
+    background: $green-1;
+    resize: none;
+
+    @extend .input;
+
+    &-feedback {
+        @include respond-to(mobiles) {
+            margin: 0 0 50px;
+        }
+    }
+}

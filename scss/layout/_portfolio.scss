@@ -1,0 +1,112 @@
+.portfolio {
+	border-top: 2px solid $gray-2;
+	
+	@include respond-to(mobiles) {
+		border: none;
+	}
+
+	&-inner {	
+		height: 18.75%;
+		width: 100%;
+		margin-top: 68px;
+
+		@include respond-to(mobiles) {
+			@include scroll(x);
+
+			margin-top: 40px;
+		}	
+	}	
+	
+	&-list {
+		display: flex;
+		justify-content: space-between;
+		height: 18.75%;
+		margin-right: -2px;
+
+		@include respond-to(mobiles) {
+			width: 400%;
+			height: 64%;
+			@include scroll(x);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 18.75%;
+		}
+	}
+
+	&-link::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&-item {
+		width: calc(100%/4 - 2px) ;
+		position: relative;
+		background-size: 100% 100%;
+
+		&.las-insurance {
+			box-shadow: inset 0 -15vw 10vw -10vw $blue-1;
+			background-image: url(../img/portfolio/portfolio_1.jpg);
+
+			@include respond-to(mobiles) {
+				box-shadow: inset 0 -45vw 20vw -25vw $blue-1;
+			}
+		}
+
+		&.college-push {
+			box-shadow: inset 0 -15vw 10vw -10vw $red-1;
+			background-image: url(../img/portfolio/portfolio_2.jpg);
+
+			@include respond-to(mobiles) {
+				box-shadow: inset 0 -45vw 20vw -25vw $red-1
+			}
+		}
+
+		&.kitovu-app {
+			box-shadow: inset 0 -15vw 10vw -10vw $pink-1;
+			background-image: url(../img/portfolio/portfolio_3.jpg);
+
+			@include respond-to(mobiles) {
+				box-shadow: inset 0 -45vw 20vw -25vw $pink-1;
+			}
+		}
+
+		&.pricedekho {
+			box-shadow: inset 0 -15vw 10vw -10vw $pink-2;
+			background-image: url(../img/portfolio/portfolio_4.jpg);
+
+			@include respond-to(mobiles) {
+				box-shadow: inset 0 -45vw 20vw -25vw $pink-2;
+			}
+		}
+	}	
+
+	&-title {
+		@include position(absolute, auto, auto, 14.2%, 6%);
+		@include font(1.5vw, 500);
+
+		color: $white-1;
+
+		@include respond-to(mobiles) {
+			font-size: 4.5vw;
+		}
+	}
+
+	&-description {
+		@include position(absolute, auto, auto, 7%, 6%);
+		@include font(1vw, 500);
+
+		color: $white-1;	
+
+		@include respond-to(mobiles) {
+			font-size: 3.5vw;
+		}
+	}
+}
+
+
+

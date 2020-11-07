@@ -3,7 +3,7 @@
         @include position(fixed, 0, auto, 0, -100%);
 
         transition: left .3s ease-in .1s;
-        z-index: 999;
+        z-index: 200;
     }
 
     &-inner {
@@ -18,9 +18,9 @@
     &-overlay {
         @include position(fixed, 0, 0, 0, 0);
 
+        z-index: -1;
         transition: background-color .3s ease-in;
-        z-index: -2;
-        background-color: rgba(0,0,0,0);
+        background-color: rgba(0, 0, 0, 0);
     }
 
     &-toggle {
@@ -33,7 +33,7 @@
                 }
 
                 ~ .nav-overlay {
-                    z-index: 3;
+                    z-index: 100;
                     background-color: $dark-3;
                 }
             }
@@ -68,9 +68,13 @@
             font-weight: normal;
 
             @include respond-to(mobiles) {
-                padding: 0 30px;
-                font-size: 3.2vw;
                 flex-flow: row wrap;
+                padding: 0 30px;
+                font-size: rem(12px);
+            }
+
+            @include respond-to(mobile-portrait) {
+                font-size: 3.2vw;
             }
         }
     }
