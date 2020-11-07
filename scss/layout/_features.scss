@@ -1,5 +1,5 @@
 .scroll {
-	@include position(absolute, -21px, auto, auto, 50%);
+	@include position(absolute, -20px, auto, auto, 50%);
 	@include prefix(transform, translateX(-50%));
 }
 
