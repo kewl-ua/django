@@ -55,6 +55,7 @@
 
 	&-title {
 		font-size: rem(24px);
+		font-weight: 500;
 		color: $gray-1;
 
 		@include respond-to(mobiles) {
@@ -75,10 +76,8 @@
 }
 
 .item-inner {
-	margin-left: 0;	
-
 	@include respond-to(mobiles) {
-		margin-left: 17.333333%;	
+		padding-left: 65px;
 	}
 }
 

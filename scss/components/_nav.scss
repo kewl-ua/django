@@ -70,6 +70,7 @@
             @include respond-to(mobiles) {
                 padding: 0 30px;
                 font-size: 3.2vw;
+                // font-size: rem(12px);
                 flex-flow: row wrap;
             }
         }
