@@ -42,6 +42,7 @@
 
 		@include respond-to(mobiles) {
 			order: 2;
+			padding: 0;
 		}
 	}
 }
