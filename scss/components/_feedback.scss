@@ -140,27 +140,4 @@
             margin: 0 0 50px;
         }
     }
-
-    &-button {
-        @include font(1.8rem, 500);
-        display: inline-block;
-        width: 205px;
-        padding: 6px;
-        margin-top: auto;
-        border: 2px solid white;
-        text-align: center;
-        transition: background-color .3s linear;
-        color: $white-1;
-        background-color: transparent;
-
-        &:hover {
-            cursor: pointer;
-            background-color: rgba(255,255,255,.2);
-        }
-
-        @include respond-to(mobiles) {
-            width: 100%;
-            font-size: 1.6rem;
-        }
-    }
 }

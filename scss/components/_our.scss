@@ -69,31 +69,20 @@
 	}
 
 	&-title {
-		font-size: 2.4rem;
-		font-weight: 700;
-		color: $white-1;
+		@include font(rem(24px), 700);
+
 		margin-bottom: 30px;
+		color: $white-1;
 
 		@include respond-to(mobiles) {
-			font-size: 1.6rem;
 			margin-bottom: 15px;
+			font-size: rem(16px);
 			flex-grow: 1;
 		}
 	}
 
-	&-btn {
-		max-width: 100px;
-		padding: 5px 0;
-		border: 1px solid $white-1;
-		font-size: 1.4rem;
-		font-weight: 700;
-		color: $white-1;
-		text-align: center;
-		transition: 1s;
+	&-button {
 
-		&:hover {
-			background: rgba(40, 40, 40, .4);
-		}
 	}
 }
 

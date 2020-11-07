@@ -1,0 +1,42 @@
+.button {
+    @include font(rem(14px), 700);
+
+    width: 100px;
+    padding: 5px 0;
+    color: $white-1;
+    border: 1px solid;
+    text-align: center;
+    transition: 1s;
+    background-color: transparent;
+
+    &:hover {
+        background: $dark-4;
+    }
+
+    &-blog {
+
+    }
+
+    &-feedback {
+        @include font(1.8rem, 500);
+
+        width: 205px;
+        padding: 6px;
+        margin-top: auto;
+        color: $white-1;
+        border-width: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background-color .3s linear;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255,255,255,.2);
+        }
+
+        @include respond-to(mobiles) {
+            width: 100%;
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 .header {
-    @include prefix(box-shadow, inset 0 -225px 100px -100px $dark-2);
+    @include box-shadow(0, -225px, 100px, -100px, $dark-2, true);
 
     height: 100vh;
     position: relative;
