@@ -1,12 +1,10 @@
 .scroll {
-	position: absolute;
-	top: -21px;
-	left: 50%;
-	transform: translateX(-50%);
+	@include position(absolute, -21px, auto, auto, 50%);
+	@include prefix(transform, translateX(-50%));
 }
 
 .features {
-	background-color: #ffffff;
+	background-color: $white-1;
 	padding-top: 110px;
 	position: relative;
 
@@ -28,21 +26,18 @@
 
 	&-item {
 		width: calc((100% - 33.398436%)/ 3);
-		text-align: center;
 		padding-bottom: 100px;
-		margin-left: 5.566406%;
-		margin-right: 5.566406%;
+		margin: 0 5.566406%;
+		text-align: center;
 
-			@include respond-to(mobiles) {
-				width: 88.8%;
-				display: flex;
-				text-align: left;
-				margin-bottom: 40px;
-				margin-left: 4%;
-				margin-right: 0;
-				padding: 0;
-				position: relative;
-			}
+		@include respond-to(mobiles) {
+			width: 88.8%;
+			margin: 0 0 40px 4%;
+			padding: 0;
+			display: flex;
+			position: relative;
+			text-align: left;
+		}
 
 		&::before {
 			content: "";
@@ -50,30 +45,30 @@
 			margin: 0 auto 20px;
 
 			@include respond-to(mobiles) {
+				@include position(absolute, -10px);
+
 				display: inline-block;
 				margin: 0;
-				position: absolute;
-				top: -10px;
 			}
 		}
 	}
 
 	&-title {
-		font-size: 2.4rem;
+		font-size: rem(24px);
 		color: $gray-1;
 
 		@include respond-to(mobiles) {
-			font-size: 1.6rem;
+			font-size: rem(16px);
 		}
 	}
 
 	&-description {
-		font-size: 1.6rem;
+		font-size: rem(16px);
 		margin-top: 8px;
 		color: $gray-3;
 
 		@include respond-to(mobiles) {
-			font-size: 1.4rem;
+			font-size: rem(14px);
 			margin-top: 8px;
 		}	
 	}
@@ -87,10 +82,13 @@
 	}
 }
 
+.feature-item::before {
+	height: 80px;
+}
+
 .feature-item.quality::before {
 	background: url('../img/why/why_sprites.png') -10px -10px;
 	width: 105px;
-	height: 80px;
 
 	@include respond-to(mobiles) {
 		background: url('../img/why/why_sprites.png') -274px -194px;
@@ -102,7 +100,6 @@
 .feature-item.money::before {
 	background: url('../img/why/why_sprites.png') -250px -10px;
 	width: 84px;
-	height: 80px;
 
 		@include respond-to(mobiles) {
 		background: url('../img/why/why_sprites.png') -134px -107px;
@@ -126,7 +123,6 @@
 .feature-item.warranty::before {
 	background: url('../img/why/why_sprites.png') -10px -107px;
 	width: 104px;
-	height: 80px;
 
 		@include respond-to(mobiles) {
 		background: url('../img/why/why_sprites.png') -10px -289px;
@@ -138,7 +134,6 @@
 .feature-item.consulting::before {
 	background: url('../img/why/why_sprites.png') -10px -194px;
 	width: 84px;
-	height: 80px;
 
 		@include respond-to(mobiles) {
 		background: url('../img/why/why_sprites.png') -250px -110px;
@@ -150,7 +145,6 @@
 .feature-item.team::before {
 	background: url('../img/why/why_sprites.png') -135px -10px;
 	width: 95px;
-	height: 80px;
 
 		@include respond-to(mobiles) {
 		background: url('../img/why/why_sprites.png') -207px -194px;
