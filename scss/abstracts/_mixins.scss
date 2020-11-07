@@ -114,10 +114,10 @@ font-size: rem(22);
 
 @mixin box-shadow($top: 0, $left: 0, $blur: 4px, $spread: 0, $color: transparent, $inset: false) {
     @if $inset {
-        @include prefix(box-shadow, inset $top $left $blur $color);
+        @include prefix(box-shadow, inset $top $left $blur $spread $color);
     }
     @else {
-        @include prefix(box-shadow, $top $left $blur $color);
+        @include prefix(box-shadow, $top $left $blur $spread $color);
     }
 }
 
