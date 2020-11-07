@@ -72,6 +72,10 @@
                 padding: 0 30px;
                 font-size: rem(12px);
             }
+
+            @include respond-to(mobile-portrait) {
+                font-size: 3.2vw;
+            }
         }
     }
 
