@@ -180,13 +180,10 @@
 		padding: 0 70px;
 
 		@include respond-to(mobiles) {
-			overflow-x: scroll;
-			padding: 0;
-			width: 152%;
+			@include scroll(x);
 
-			&::-webkit-scrollbar {
-				display: none;
-			}
+			width: 152%;
+			padding: 0;
 		}
 	}
 
