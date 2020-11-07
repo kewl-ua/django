@@ -33,20 +33,21 @@
 
     &-content {
         @include position(absolute, 0, 26.7%, 0, auto);
+        @include prefix(transform, translateX(50%));
 
         display: flex;
         flex-direction: column;
         width: 512px;
         padding: 30px 25px;
-        transform: translateX(50%);
         background: $green-1;
         z-index: 2;
 
         @include respond-to(mobiles) {
+            @include prefix(transform, none);
+
             width: 100%;
             padding: 45px 15px 30px;
             position: static;
-            transform: none;
         }
     }
 
