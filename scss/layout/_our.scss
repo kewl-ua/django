@@ -1,6 +1,5 @@
 .our {
 	border-top: 2px solid $gray-2;
-	padding: 110px 0 100px;
 
 	@include respond-to(mobiles) {
 		border: none;
@@ -19,16 +18,21 @@
 			width: 100%;
 			padding: 0 30px;
 		}
+
+		@include respond-to(mobile-portrait) {
+			padding: 0;
+		}
 	}
 }
 
 .blog {
 	&-list {
 		height: 480px;
-		margin-bottom: 110px;
+		margin-top: 68px;
 
 		@include respond-to(mobiles) {
 			height: 560px;
+			margin-top: 30px;
 		}
 
 		&::after {
@@ -169,8 +173,12 @@
 
 .clients {
 	&-wrap {
+		margin-top: 68px;
+
 		@include respond-to(mobiles) {
 			@include scroll(x);
+			
+			margin: 0;
 		}
 	}
 
@@ -184,6 +192,10 @@
 
 			width: 152%;
 			padding: 0;
+		}
+
+		@include respond-to(mobile-portrait) {
+			width: 150%;
 		}
 	}
 
@@ -204,6 +216,10 @@
 
 		@include respond-to(mobiles) {
 			padding-top: 25px;
+		}
+
+		@include respond-to(mobile-portrait) {
+			transform: scale(.65);
 		}
 	}
 }

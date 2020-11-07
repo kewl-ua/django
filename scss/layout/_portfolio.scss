@@ -1,6 +1,5 @@
 .portfolio {
 	border-top: 2px solid $gray-2;
-	padding: 5.2% 0 9.375%;
 	
 	@include respond-to(mobiles) {
 		border: none;
@@ -9,9 +8,12 @@
 	&-inner {	
 		height: 18.75%;
 		width: 100%;
+		margin-top: 68px;
 
 		@include respond-to(mobiles) {
 			@include scroll(x);
+
+			margin-top: 40px;
 		}	
 	}	
 	
