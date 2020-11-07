@@ -1,20 +1,18 @@
-.contact {
-	&-list {
-		@include font(rem(18px), 500);
+.contacts {
+	@include font(rem(18px), 500);
 
-		display: flex;
-		margin-top: 20px;
+	display: flex;
+	margin-top: 20px;
 
-		@include respond-to(mobiles) {
-			justify-content: space-around;
-			font-size: rem(14px);
-		}
+	@include respond-to(mobiles) {
+		justify-content: space-around;
+		font-size: rem(14px);
 	}
+}
 
-	&-item {
-		& + & {
-			margin-left: 40px;
-		}
+.contact {
+	& + & {
+		margin-left: 40px;
 	}
 
 	&-link {
