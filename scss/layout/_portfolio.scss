@@ -20,6 +20,8 @@
 	}	
 	
 	&-list {
+		@include proportion(360px, 1920px);
+
 		display: flex;
 		justify-content: space-between;
 		height: 18.75%;
@@ -29,12 +31,6 @@
 			width: 400%;
 			height: 64%;
 			@include scroll(x);
-		}
-
-		&::after {
-			content: "";
-			display: block;
-			padding-bottom: 18.75%;
 		}
 	}
 
