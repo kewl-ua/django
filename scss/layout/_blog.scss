@@ -3,20 +3,27 @@
 
     &-inner {
         @include site-width;
+        @include proportion(480px, 1024px);
+
+        margin-top: 72px;
+        position: relative;
     }
 }
 
 .articles {
-    height: 480px;
-    margin-top: 72px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     color: $white-1;
 }
 
 .article {
-    float: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    float: left;
     height: 100%;
     padding: 34px;
     outline: 2px solid $white-1;
@@ -24,25 +31,25 @@
 
     &:nth-child(1) {
         width: 50%;
-        background-color: rgba(96, 185, 232, .4);
+        background-color: $blue-2;
     }
 
     &:nth-child(2) {
         width: 50%;
         height: 50%;
-        background-color: rgba(247, 181, 90, .4);
+        background-color: $brown-1;
     }
 
     &:nth-child(3) {
         width: 25%;
         height: 50%;
-        background-color: rgba(147, 123, 177, .4);
+        background-color: $purple-1;
     }
 
     &:nth-child(4) {
         width: 25%;
         height: 50%;
-        background-color: rgba(32, 193, 162, .4);
+        background-color: $turquoise-1;
     }
 
     &-details {
@@ -54,6 +61,7 @@
     &-date {
         display: inline-flex;
         flex-direction: column;
+        text-align: center;
     }
 
     &-day {
@@ -97,8 +105,14 @@
 }
 
 @include respond-to(mobiles) {
+    .blog {
+        &-inner {
+            @include proportion(560px, 375px);
+        }
+    }
+
     .articles {
-        height: 560px;
+
     }
 
     .article {
@@ -120,26 +134,35 @@
         }
 
         &-day {
-            font-size: rem(22px);
+            font-size: vw(22px, 375px);
         }
 
         &-month {
-            font-size: rem(12px);
+            font-size: vw(12px, 375px);
         }
 
         &-category {
-            font-size: rem(10px);
+            font-size: vw(10px, 375px);
         }
 
         &-title {
+            @include font(vw(16px, 375px), 500);
+
             margin-top: 30px;
-            font-size: rem(16px);
         }
 
         &-link {
             padding: 6px 38px;
             margin-top: auto;
-            font-size: rem(14px);
+            font-size: vw(14px, 375px);
+        }
+    }
+}
+
+@include respond-to(mobile-portrait) {
+    .article {
+        &-link {
+            font-size: vw(12px, 375px);
         }
     }
 }
