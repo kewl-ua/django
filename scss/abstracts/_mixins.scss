@@ -2,6 +2,18 @@
     @return ($px / $base) * 1rem;
 }
 
+@function vw($px, $viewport-width) {
+    @return ($px / $viewport-width) * 100 * 1vw;
+}
+
+@mixin proportion($height, $width) {
+    &::before {
+        content: "";
+        display: block;
+        padding-bottom: $height / $width * 100 * 1%;
+    }
+}
+
 @mixin site-width($width: $global-site-width) {
     margin: 0 auto;
     max-width: $width;
