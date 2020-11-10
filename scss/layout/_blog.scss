@@ -1,4 +1,6 @@
 .blog {
+    border-top: 2px solid $gray-2;
+
     &-inner {
         @include site-width;
     }
@@ -84,9 +86,13 @@
         flex-basis: auto;
         align-self: flex-start;
         max-width: 100%;
-        padding: 10px 15px;
+        padding: 6px 15px;
         margin-top: 25px;
         border: 1px solid $white-1;
+
+        &:hover {
+            outline: 1px solid;
+        }
     }
 }
 
@@ -131,7 +137,7 @@
         }
 
         &-link {
-            padding: 10px 38px;
+            padding: 6px 38px;
             margin-top: auto;
             font-size: rem(14px);
         }
