@@ -8,7 +8,6 @@
 	}
 
 	&-inner {	
-		height: 18.75%;
 		width: 100%;
 		margin-top: 68px;
 
@@ -24,12 +23,11 @@
 
 		display: flex;
 		justify-content: space-between;
-		height: 18.75%;
 
 		@include respond-to(mobiles) {
-			width: 400%;
-			height: 64%;
 			@include scroll(x);
+
+			width: 400%;
 		}
 	}
 
@@ -41,7 +39,7 @@
 	}
 
 	&-item {
-		width: calc(100%/4 - 2px) ;
+		width: calc(25% - 2px) ;
 		position: relative;
 		background-size: 100% 100%;
 
